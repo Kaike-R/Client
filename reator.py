@@ -31,7 +31,7 @@ def reatorSet():
         p = requests.post('http://localhost:5000/Reator/SetReator',verify=False,headers={'content-type':'application/json'},data=body)
         s = p.json()
         
-        print("SetReator = "  + str(s))
+        #print("SetReator = "  + str(s))
 
 def reatorSee():
     
@@ -39,20 +39,20 @@ def reatorSee():
 
     s = p.json()
 
-    print("SeeReator = " + str(s))
+    #print("SeeReator = " + str(s))
 
 def reatorMistura():
     while True:
         sleep(1)
         p = requests.post('http://localhost:5000/Reator/ProcessarLiquido',verify=False)
         s = p.json()
-        if s != 0:
-            print("Quantidade Misturada = " + str(s))
+        #if s != 0:
+            #print("Quantidade Misturada = " + str(s))
 
 def PostarVolume():
-        p = requests.post('http://localhost:5000/Reator/ProcessarLiquido',verify=False)
+        p = requests.post('http://localhost:5000/Reator/PostVolume',verify=False)
         s = p.json()
-        print("Liquido Processado = " + str(s))
+        #print("Liquido Processado = " + str(s))
         return s
 
 

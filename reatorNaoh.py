@@ -12,19 +12,19 @@ def reatorNaohSet():
         p = requests.post('http://localhost:5000/ReatorNaoh/SetNaoh',verify=False)
         s = p.json()
         
-        print("SetNaoh = "  + str(s))
+        #print("SetNaoh = "  + str(s))
 
     
 
 def reatorNaohSee():
     r = requests.get('http://localhost:5000/ReatorNaoh/SeeNaoh',verify=False)
     stringer = r.json()
-    print(stringer)
+    #print(stringer)
     return stringer
 
 def reatorNaohGet():
         
     c = requests.get('http://localhost:5000/ReatorNaoh/GetNaoh',verify=False)
     d = c.json()
-    print("getNaoh = "  + str(d))
+    #print("getNaoh = "  + str(d))
     return d    
