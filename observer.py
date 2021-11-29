@@ -19,10 +19,10 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 
-def imprimir(x,y,z,a,d,b):
+def imprimir(x,y,z,a,d,b,c):
     #os.system('cls') or None
     print("----------------------------------------------------------------------\n")
-    print("| Oleo: " + str(x) +" | " + "Cliclos: " + str(1) + " |\n")
+    print("| Oleo: " + str(x) +" | " + "Cliclos: " + str(c) + " |\n")
     print("| Etoh: " + str(y) +" | " + "Biodisel: " + str(b) + " |\n")
     print("| Naoh: " + str(z) +" | " + "Glicerina: " + str(a) + " |\n")
     print("| Reator: " + str(d) +" | " + "Glicerina: " + str(a) + " |\n")
@@ -39,6 +39,6 @@ def colect():
         volumeGli = tanqueDeGli.tanqueSeeOleo()
         volumeReator = reator.reatorSee()
         volumeBiodiesel = tanqueDeBiodiesel.tanqueSeeBiodiesel()
-        #ciclos = reator.GetCiclos()
-        imprimir(volumeOleo,volumeEtoh,volumeNaoh,volumeGli,volumeReator,volumeBiodiesel)
+        ciclos = reator.getCiclos()
+        imprimir(volumeOleo,volumeEtoh,volumeNaoh,volumeGli,volumeReator,volumeBiodiesel,ciclos)
 

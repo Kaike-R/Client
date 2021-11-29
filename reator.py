@@ -55,5 +55,9 @@ def PostarVolume():
         #print("Liquido Processado = " + str(s))
         return s
 
+def getCiclos():
+    p = requests.get('http://localhost:5000/Reator/GetCiclos',verify=False)
+    s = p.json()
+    return s
 
 
